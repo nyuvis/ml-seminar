@@ -1,0 +1,21 @@
+/**
+ * Created by krause on 2016-07-22.
+ */
+
+.anchor {
+  opacity: 0;
+  color: black !important;
+  text-decoration: none;
+}
+
+.anchor:hover {
+  opacity: 0.5 !important;
+}
+
+h4:hover .anchor {
+  opacity: 0.75;
+}
+
+:target .media-body {
+  background-color: #ffa;
+}

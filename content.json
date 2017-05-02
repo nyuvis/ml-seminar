@@ -1,0 +1,26 @@
+{
+  "name": "ML Seminar",
+  "description": "Bla bla bla",
+  "presenters": {
+    "foo": {
+      "name": "Foo",
+      "href": "foo.com"
+    },
+    "bar": {
+      "name": "Bar"
+    }
+  },
+  "events": [
+    {
+      "date": "May 8th 2017",
+      "title": "First Meeting",
+      "presenters": [
+        "foo",
+        "bar"
+      ],
+      "material": {
+        "slides": "material/foo.pdf"
+      }
+    }
+  ]
+}
