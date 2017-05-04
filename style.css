@@ -1,7 +1,10 @@
-body { margin: 0; }
+body { 
+    margin: 0; 
+    font-family: "proxima-nova",sans-serif; 
+}
 
 
-#header {
+#header_logo {
     background-color: #1D252C;
     color:#FFF;
     height:130px;
@@ -14,16 +17,45 @@ body { margin: 0; }
     margin-right: 10px;
 }
 
-#mlvis_header_text {
-    color:#FFF;
+#header h1 {
+    color:#57068c;
     font-family: "proxima-nova",sans-serif;
     font-size:25pt;
-    float:left;
     margin-left: 30px;
-    margin-top: 45px;
+    margin-top: 20px;
 }
 
 #purple_line {
     background-color: #57068c;
     height:10px;
+}
+
+#description {
+    padding-left:90px;
+    padding-right:90px;
+    font-size:14pt;
+    text-align: justify;
+    color:#555;
+}
+
+#talks {
+    margin-left:30px;
+    margin-top:40px;
+}
+
+.talk_info {
+    margin-left:60px;
+    color:#555;
+}
+
+.talk_info a{
+    color:#555;
+}
+
+.talk_container h2{
+    color:00757a;
+}
+
+.talk_container h3{
+    color:#555;
 }
