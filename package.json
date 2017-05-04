@@ -1,0 +1,22 @@
+{
+  "name": "ml-seminar",
+  "version": "1.0.0",
+  "description": "ml-seminar web-page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyuvis/ml-seminar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyuvis/ml-seminar/issues"
+  },
+  "homepage": "https://github.com/nyuvis/ml-seminar#readme",
+  "dependencies": {
+    "d3": "^4.8.0"
+  }
+}

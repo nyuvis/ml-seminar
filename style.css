@@ -1,0 +1,29 @@
+body { margin: 0; }
+
+
+#header {
+    background-color: #1D252C;
+    color:#FFF;
+    height:130px;
+    margin:0px;
+}
+
+#logo {
+    margin-top: 30px;
+    float:right;
+    margin-right: 10px;
+}
+
+#mlvis_header_text {
+    color:#FFF;
+    font-family: "proxima-nova",sans-serif;
+    font-size:25pt;
+    float:left;
+    margin-left: 30px;
+    margin-top: 45px;
+}
+
+#purple_line {
+    background-color: #57068c;
+    height:10px;
+}
