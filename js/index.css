@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: "proxima-nova",sans-serif;
+}
+
+.anchor {
+  opacity: 0;
+  color: black !important;
+  text-decoration: none;
+  font-size: 55%;
+  vertical-align: middle;
+}
+
+.anchor:hover {
+  opacity: 0.5 !important;
+}
+
+h2:hover .anchor {
+  opacity: 0.75;
+}
+
+#header_logo {
+    background-color: #1D252C;
+    color:#FFF;
+    height:130px;
+    margin:0px;
+}
+
+#logo {
+    margin-top: 30px;
+    float:right;
+    margin-right: 15px;
+}
+
+#header h1 {
+    color:#57068c;
+    font-family: "proxima-nova",sans-serif;
+    font-size:25pt;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#purple_line {
+    background-color: #57068c;
+    height:10px;
+}
+
+#description {
+    padding-left:90px;
+    padding-right:90px;
+    font-size:14pt;
+    text-align: justify;
+    color:#555;
+}
+
+#talks {
+    margin-left:30px;
+    margin-top:40px;
+}
+
+.talk_info {
+    margin-left:60px;
+    color:#555;
+}
+
+.talk_info a{
+    color:#555;
+}
+
+.talk_container h2{
+    color:00757a;
+}
+
+.talk_container h3{
+    color:#555;
+}

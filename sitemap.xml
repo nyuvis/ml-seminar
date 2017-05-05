@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://nyuvis.github.io/ml-seminar/img/icon.png</loc>
+    <lastmod>2017-05-05T01:10:21-04:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nyuvis.github.io/ml-seminar/img/nyu_logo.png</loc>
+    <lastmod>2017-05-05T01:10:21-04:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nyuvis.github.io/ml-seminar/img/nyu_logo_scaled.png</loc>
+    <lastmod>2017-05-05T01:10:21-04:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nyuvis.github.io/ml-seminar/index.html</loc>
+    <lastmod>2017-05-05T01:10:39.927047-04:00</lastmod>
+  </url>
+  <url>
+    <loc>https://nyuvis.github.io/ml-seminar/material/foo.pdf</loc>
+    <lastmod>2017-05-05T01:10:21-04:00</lastmod>
+  </url>
+</urlset>
