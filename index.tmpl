@@ -11,29 +11,23 @@
   <link rel="stylesheet" type="text/css" href="js/index.css">
 </head>
 <body>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container clearfix">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">{name}</a>
-      </div>
-      <div class="nav navbar-nav navbar-right">
-        <!-- header right !-->
+  <div id="header">
+    <div id="header_logo">
+      <div id="logo">
+        <img src="img/nyu_logo.png" width="384px" height="60px"/>
       </div>
     </div>
-  </nav>
-  <div class="container bs-docs-container">
-    <div class="row">
-      <div class="col-md-9">
-        <p>
-          {description}
-        </p>
-      </div>
+    <div id="purple_line">
     </div>
-    <div class="row">
-      <div class="col-md-10" role="main">
-        {content}
-      </div>
-    </div>
+    <h1>{name}</h1>
+  </div>
+  <div id="description">
+    <p>
+      {description}
+    </p>
+  </div>
+  <div id="talks">
+    {content}
   </div>
 </body>
 </html>

@@ -1,26 +1,49 @@
 {
-  "name": "ML Seminar",
-  "description": "Bla bla bla",
-  "presenters": {
-    "foo": {
-      "name": "Foo",
-      "href": "foo.com"
-    },
-    "bar": {
-      "name": "Bar"
-    }
-  },
+  "name": "ML Vis Seminar",
+  "description": "The creation of learning classifiers requires an iterative process that is often time-consuming for machine learning and domain experts alike. There are many challenges involved in selecting the learning method, labeling data items, incrementally tuning a classifier, and assessing its effectiveness. This seminar aims at exploring how visualization can be used to help humans to understand and train better models. The NYU Machine Learning Visualization Seminar takes place on Thursdays from 4 – 530 pm on the 10th floor of Tandon School of Engineering, 2 Metrotech Center.",
   "events": [
     {
-      "date": "May 8th 2017",
+      "date": "Apr 10th 2017",
       "title": "First Meeting",
       "presenters": [
-        "foo",
-        "bar"
+        {
+          "name": "James Foo",
+          "href": "http://google.com"
+        },
+        {
+          "name": "David Bar",
+          "href": "http://google.com"
+        }
       ],
-      "material": {
-        "slides": "material/foo.pdf"
-      }
+      "materials": [
+        {
+          "name": "Paper",
+          "href": "material/foo.pdf"
+        }
+      ]
+    },
+    {
+      "date": "May 15th 2017",
+      "title": "Second Meeting",
+      "presenters": [
+        {
+          "name": "Gabriel Standard",
+          "href": "http://google.com"
+        },
+        {
+          "name": "Connor McCoy"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Slides",
+          "href": "material/foo.pdf"
+        },
+        {
+          "name": "Paper",
+          "href": "material/foo.pdf"
+        }
+      ]
     }
   ]
 }

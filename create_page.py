@@ -30,59 +30,52 @@ def mktime(dt):
         res = (td.microseconds + (td.seconds + td.days * _day_seconds) * _milli) / _milli
     return int(res - res % _day_seconds)
 
-def monthtime(dt):
-    return "{0}-{1}".format(dt.year, dt.month)
-
 def chk(doc, field):
     return field in doc and doc[field]
 
 def add_misc_links(appendix, docs):
-    for (key, value) in docs.items():
-        appendix.append(u"""<a href="{0}">[{1}]</a>""".format(value, key))
+    for app in docs:
+        appendix.append(u"""<a href="{0}">[{1}]</a>""".format(app["href"], app["name"]))
 
-def create_media(doc, presenters):
+def create_media(doc):
     doc.sort(key=lambda t: (tparse(t['date']), t['title']), reverse=True)
     content = u''
     for e in doc:
-        entry_id = u"entry{:08x}".format(zlib.crc32(u"{0}_{1}".format(e['title'], mktime(tparse(e['date']))).encode('utf-8')) & 0xffffffff)
+        dt = tparse(e['date'])
+        entry_id = u"entry{:08x}".format(zlib.crc32(u"{0}_{1}".format(e['title'], mktime(dt)).encode('utf-8')) & 0xffffffff)
         appendix = []
-        add_misc_links(appendix, e["material"])
+        add_misc_links(appendix, e["materials"])
         authors = u''
         for p in e["presenters"]:
-            pres = presenters[p]
             if authors:
-                authors += u", "
-            if chk(pres, "href"):
-                authors += u"""<a href="{0}">{1}</a>""".format(pres["href"], pres["name"])
+                authors += u"<span>, </span>"
+            if chk(p, "href"):
+                authors += u"""<a href="{0}">{1}</a>""".format(p["href"], p["name"])
             else:
-                authors += pres["name"]
-        body = u"""
-        <h4 class="media-heading">{1} <a href="#{0}" class="anchor" aria-hidden="true"><i class="fa fa-thumb-tack fa-1" aria-hidden="true"></i></a><br/>
-        <small>{2}</small></h4>
-        <em>{3}</em>{4}
-        """.format(
-            entry_id,
-            e['date'],
-            e['title'],
-            authors,
-            u"<br/>\n{0}".format(" ".join(appendix)) if appendix else "",
-        )
+                authors += u"""<span>{0}</span>""".format(p["name"])
         entry = u"""
-        <a class="pull-left" href="#{0}">
-          <img class="media-object" src="{1}" title="{2}" alt="{3}" style="width: 64px;">
-        </a>
-        <div class="media-body">
-          {4}
+        <h2>
+          <a href="#{0}" class="anchor" aria-hidden="true"><i class="fa fa-thumb-tack fa-1" aria-hidden="true"></i></a>
+          {1}
+        </h2>
+        <div class="talk_info">
+          <h3>{2}</h3>
+          <div class="presenter_info">
+            {3}
+          </div>
+          <div class="materials">
+            {4}
+          </div>
         </div>
         """.format(
             entry_id,
-            e['logo'] if chk(e, 'logo') else "img/nologo.png",
             e['title'],
-            e['short-title'] if chk(e, 'short-title') else e['title'],
-            body,
+            dt.strftime("%a, %B %d %Y"),
+            authors,
+            " ".join(appendix) if appendix else "",
         )
         content += u"""
-        <div class="media" id="{0}">
+        <div class="talk_container" id="{0}">
           {1}
         </div>
         """.format(entry_id, entry)
@@ -100,8 +93,7 @@ def apply_template(tmpl, docs):
         data = re.sub(u'''"([^"]|\\\\")*":\s*"([^"]|\\\\")*"''', sanitize, data)
         dobj = json.loads(data, encoding='utf-8')
     doc_objs = dobj["events"]
-    presenters = dobj["presenters"]
-    media = create_media(doc_objs, presenters)
+    media = create_media(doc_objs)
     return content.format(
         name=dobj["name"].strip(),
         description=dobj["description"].strip(),
